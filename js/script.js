@@ -1,48 +1,48 @@
-// Inisialisasi Icon Lucide
+// Inisialisasi awal
 lucide.createIcons();
 
-// Fungsi Toggle Password
-function togglePassword(input, icon) {
-    if (!input || !icon) return;
+// Fungsi Rubah Icon
+function togglePassword(input, iconId) {
+    const iconElement = document.getElementById(iconId); // Ambil elemen terbaru dari DOM
+    
+    if (!input || !iconElement) return;
+
     const isPassword = input.type === 'password';
+    
     input.type = isPassword ? 'text' : 'password';
-    icon.setAttribute('data-lucide', isPassword ? 'eye' : 'eye-off');
+
+    // Ganti Icon
+    const newIcon = document.createElement('i');
+    newIcon.setAttribute('data-lucide', isPassword ? 'eye' : 'eye-off');
+    newIcon.id = iconId;
+    newIcon.className = iconElement.className;
+    iconElement.parentNode.replaceChild(newIcon, iconElement);
     lucide.createIcons();
 }
 
-
-// Login Page
+// --- Login Page ---
 const loginPasswordInput = document.getElementById('login-password');
-const loginEyeIcon = document.getElementById('login-eye-icon');
 const loginEyeBtn = document.getElementById('login-eye-btn'); 
 
 if (loginEyeBtn) {
-    loginEyeBtn.addEventListener('click', () => {   
-        togglePassword(loginPasswordInput, loginEyeIcon);
+    loginEyeBtn.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        togglePassword(loginPasswordInput, 'login-eye-icon');
     });
 }
 
-// Register Page
+// --- Register Page ---
 const regPasswordInput = document.getElementById('reg-password-input');
-const regEyeIcon = document.getElementById('reg-eye-icon');
 const regEyeBtn = document.getElementById('reg-eye-btn'); 
 
 if (regEyeBtn) {
-    regEyeBtn.addEventListener('click', () => {
-        togglePassword(regPasswordInput, regEyeIcon);
+    regEyeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        togglePassword(regPasswordInput, 'reg-eye-icon');
     });
 }
 
-// fungsi pindah halaman
-function showMain() {
-    window.location.href = 'main.html';
-}
-
-function showLogin() {
-    window.location.href = 'login.html';
-}
-
-function showRegister() {
-    window.location.href = 'register.html';
-}
-
+// Fungsi pindah halaman (Tetap sama)
+function showMain() { window.location.href = 'main.html'; }
+function showLogin() { window.location.href = 'login.html'; }
+function showRegister() { window.location.href = 'register.html'; }
