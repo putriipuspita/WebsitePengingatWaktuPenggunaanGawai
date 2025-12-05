@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../css/auth.css">
+    <!-- Icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Register Start -->
+    <div id="register" class="hidden-screen">
+        <div class="container register-card">
+            
+            <!-- Form Input -->
+            <div class="column form">
+                <div class="form-container">
+                    <h2 class="judul">Create Account</h2>
+            
+                    <form onsubmit="event.preventDefault();" class="form-input">
+                        
+                        <!-- Parent Name -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i data-lucide="users" width="20" height="20"></i>
+                            </div>
+                            <input type="text" placeholder="Parent Name" class="input-form" />
+                        </div>
+
+                        <!-- Child Name -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i data-lucide="smile" width="20" height="20"></i>
+                            </div>
+                            <input type="text" placeholder="Child Name" class="input-form" />
+                        </div>
+
+                        <!-- Username -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i data-lucide="user" width="20" height="20"></i>
+                            </div>
+                            <input type="text" placeholder="Username" class="input-form" />
+                        </div>
+            
+                        <!-- Password -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i data-lucide="lock" width="20" height="20"></i>
+                            </div>
+                            <input id="reg-password-input" type="password" placeholder="Password" class="input-form password-type" />
+                            <button type="button" onclick="toggleRegisterPassword()" class="toggle-password" >
+                                <i id="reg-eye-icon" data-lucide="eye-off" width="20" height="20"></i>
+                            </button>
+                        </div>
+
+                        <!-- Button -->
+                        <button type="submit" class="btn btn-primary btn-submit">Sign Up</button>
+            
+                        <p class="form-footer">
+                            Already have account ? <button onclick="showLogin()" class="btn-link">Login</button>
+                        </p>
+                    </form>
+                    
+                    <button onclick="showMain()" class="btn-back"><span>&larr;</span> Back</button>
+                </div>
+            </div>
+
+            <!-- Gambar -->
+            <div class="column column-image">
+                <div class="img-container">
+                    <img src="../asset/icon.png" alt="Gambar Main Gadget" class="gambar">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Register End -->
+    <!-- Sript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+/* Helper Class */
+/* .hidden-screen {
+    display: none !important;
+} */
+
+/* Halaman Main */
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #4F755E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#main .column {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+
+#main .gambar {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.3));
+}
+
+.main-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1.main-judul {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+p.deskripsi {
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.main-btn {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Login dan Register */
+#login, #register {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    height: auto;
+    max-height: 85vh; 
+    aspect-ratio: 16/9;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.container .column {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.container .gambar {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+h2.judul {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    text-align:center
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.column-image {
+    align-items: center;
+}
+
+/* Login */
+.login-container .column.form {
+    padding-left: 2rem;
+    padding-right: 4rem;
+}
+
+/* Register */
+.register-card .column.form {
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.register-card h2.judul {
+    margin-top : 40px;
+    margin-bottom : 20px;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    transition: transform 0.1s, background-color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.btn-submit {
+    margin-top: 1rem;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #9DCCA6;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #8eb996;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #5A8D66;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    text-transform: none;
+    font-size: 0.95rem;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    width: auto;
+    padding: 0;
+    text-transform: none;
+}
+
+.btn-back:hover {
+    color: #4b5563;
+}
+
+/* Form Login dan Register */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem; /* Slightly reduced for register form density */
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1f2937;
+    pointer-events: none;
+}
+
+.input-form {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 3rem;
+    border: 2px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-form.password-type {
+    padding-right: 3rem;
+}
+
+.input-form:focus {
+    border-color: #4F755E;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    #main, #login, #register {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        width: 90%;
+        margin: 2rem 0;
+        aspect-ratio: auto;
+    }
+
+    .container .column-image {
+        order: 1;
+    }
+    .container .column.form {
+        order: 2;
+    }
+
+    /* Reset padding untuk kolom di mobile */
+    #main .column, 
+    .container .column,
+    .container .column.form { 
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+
+    #main .column:nth-child(1) { order: 1; }
+    #main .column:nth-child(2) { order: 2; }
+
+    h1.main-judul { font-size: 3rem; }
+    h2.judul { font-size: 2rem; }
+    .gambar { max-width: 80%; }
+}
+
+
