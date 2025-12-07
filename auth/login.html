@@ -42,12 +42,12 @@
                             </div>
                             
                             <input id="login-password" type="password" placeholder="Password" class="input-form password-type" />
-                            <button type="button" onclick="toggleLoginPassword()" class="toggle-password" id="login-eye-btn">
+                            <button type="button" onclick="togglePassword(document.getElementById('login-password'), 'login-eye-icon')" class="toggle-password" id="login-eye-btn">
                                 <i id="login-eye-icon" data-lucide="eye-off" width="20" height="20"></i>
                             </button>
                         </div>
             
-                        <button type="submit" class="btn btn-primary btn-submit">Login</button>
+                        <button type="submit" class="btn btn-submit btn-primary" onclick="goToDashboard()">Login</button>
             
                         <p class="form-footer">
                             Don't have account ? <button onclick="showRegister()" class="btn-link">Sign Up</button>
